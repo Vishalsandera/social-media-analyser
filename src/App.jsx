@@ -1,16 +1,17 @@
 import "./App.css";
 
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="app">
-      <h1>📊 Social Media Analyser</h1>
-
-      <p>
-        Analyze Instagram, YouTube, LinkedIn, X and other social media
-        profiles using AI.
-      </p>
-
-      <button>Analyze Profile</button>
+      <Navbar />
+      <Hero />
+      <Features />
+      <Footer />
     </div>
   );
 }

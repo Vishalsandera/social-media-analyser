@@ -1,0 +1,332 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    width:100%;
+
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar-wrapper{
+
+    height:76px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:#fff;
+}
+
+.logo-icon{
+
+    width:46px;
+    height:46px;
+
+    border-radius:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.30);
+}
+
+.logo-text{
+
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-title{
+
+    font-size:18px;
+    font-weight:700;
+}
+
+.logo-subtitle{
+
+    font-size:13px;
+    color:#94a3b8;
+}
+
+/* ===========================
+   NAV LINKS
+=========================== */
+
+.nav-menu{
+
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.nav-menu a{
+
+    color:#cbd5e1;
+    font-size:15px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+
+    color:white;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.desktop-buttons{
+
+    display:flex;
+    gap:14px;
+}
+
+.mobile-buttons{
+
+    display:none;
+}
+
+.login-btn{
+
+    padding:11px 20px;
+
+    border-radius:10px;
+
+    border:1px solid #3b82f6;
+
+    background:transparent;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.login-btn:hover{
+
+    background:#2563eb;
+}
+
+.primary-btn{
+
+    padding:11px 22px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+}
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.hamburger{
+
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    background:none;
+    border:none;
+
+    flex-direction:column;
+    justify-content:center;
+
+    gap:6px;
+}
+
+.hamburger span{
+
+    width:28px;
+    height:3px;
+
+    background:white;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.hamburger.active span:nth-child(1){
+
+    transform:translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:translateY(-9px) rotate(-45deg);
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.nav-menu{
+
+gap:20px;
+}
+
+.desktop-buttons{
+
+gap:10px;
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.desktop-buttons{
+
+display:none;
+}
+
+.hamburger{
+
+display:flex;
+}
+
+.nav-menu{
+
+position:absolute;
+
+top:76px;
+left:0;
+
+width:100%;
+
+background:#0f172a;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+display:none;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+padding:25px;
+
+gap:22px;
+}
+
+.nav-menu.active{
+
+display:flex;
+}
+
+.mobile-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+width:100%;
+
+gap:14px;
+
+margin-top:8px;
+}
+
+.mobile-buttons button{
+
+width:100%;
+}
+
+.logo-title{
+
+font-size:16px;
+}
+
+.logo-subtitle{
+
+font-size:12px;
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.navbar-wrapper{
+
+height:70px;
+}
+
+.logo-icon{
+
+width:42px;
+height:42px;
+}
+
+.logo-title{
+
+font-size:15px;
+}
+
+.logo-subtitle{
+
+font-size:11px;
+}
+
+.nav-menu{
+
+top:70px;
+}
+
+}
