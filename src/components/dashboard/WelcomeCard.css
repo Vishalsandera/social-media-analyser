@@ -1,0 +1,303 @@
+/* ===========================
+   WELCOME CARD
+=========================== */
+
+.welcome-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:42px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(37,99,235,.18),
+        rgba(15,23,42,.92)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    position:relative;
+
+    margin-bottom:36px;
+}
+
+.welcome-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-120px;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.15);
+
+    filter:blur(70px);
+}
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+.welcome-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:620px;
+}
+
+.welcome-badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(59,130,246,.15);
+
+    color:#60a5fa;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.welcome-content h2{
+
+    font-size:42px;
+
+    color:white;
+
+    margin-bottom:18px;
+}
+
+.welcome-content p{
+
+    color:#94a3b8;
+
+    line-height:1.8;
+
+    font-size:17px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.welcome-actions{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:32px;
+}
+
+.primary-btn{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 14px 28px rgba(37,99,235,.30);
+}
+
+.secondary-btn{
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:transparent;
+
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+
+    background:rgba(255,255,255,.06);
+}
+
+/* ===========================
+   SCORE
+=========================== */
+
+.welcome-score{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.score-circle{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    box-shadow:0 20px 45px rgba(37,99,235,.35);
+
+    margin-bottom:20px;
+}
+
+.score-circle span{
+
+    color:white;
+
+    font-size:52px;
+
+    font-weight:700;
+}
+
+.welcome-score h3{
+
+    color:white;
+
+    margin-bottom:10px;
+}
+
+.welcome-score p{
+
+    color:#94a3b8;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.welcome-card{
+
+flex-direction:column;
+
+text-align:center;
+}
+
+.welcome-content{
+
+max-width:100%;
+}
+
+.welcome-actions{
+
+justify-content:center;
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.welcome-card{
+
+padding:28px;
+}
+
+.welcome-content h2{
+
+font-size:32px;
+}
+
+.welcome-actions{
+
+flex-direction:column;
+}
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+}
+
+.score-circle{
+
+width:120px;
+
+height:120px;
+}
+
+.score-circle span{
+
+font-size:42px;
+}
+
+}

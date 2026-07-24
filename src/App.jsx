@@ -1,18 +1,16 @@
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
+import Landing from "./pages/Landing";
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
